@@ -1,5 +1,9 @@
+package activities;
+
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
+
 import org.apache.commons.io.FileUtils;
 
 public class Activity14 {
@@ -9,7 +13,7 @@ public class Activity14 {
             boolean fStatus = file.createNewFile();
             if(fStatus) {
                 System.out.println("File created successfully!");
-                FileUtils.writeStringToFile(inputFile, "Some text in a file", Charset.defaultCharset());
+                FileUtils.writeStringToFile(file, "Some text in a file", Charset.defaultCharset());
             } else {
                 System.out.println("File already exists at this path.");
             }
